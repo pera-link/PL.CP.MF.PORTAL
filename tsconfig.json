@@ -1,4 +1,5 @@
 {
+  // @ts-ignore
   "extends": "ts-config-single-spa",
   "files": ["src/PeraLink-root-config.ts"],
   "compilerOptions": {
