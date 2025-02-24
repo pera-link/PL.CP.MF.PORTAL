@@ -1,5 +1,5 @@
 {
-  "name": "@PeraLink/root-config",
+  "name": "@peralink/root-config",
   "scripts": {
     "start": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src --ext js,ts,tsx",
@@ -43,7 +43,8 @@
     "@types/jest": "^27.0.1",
     "@types/systemjs": "^6.1.1",
     "single-spa": "^5.9.3",
-    "@types/webpack-env": "^1.16.2"
+    "@types/webpack-env": "^1.16.2",
+    "single-spa-layout": "^1.6.0"
   },
-  "types": "dist/PeraLink-root-config.d.ts"
+  "types": "dist/peralink-root-config.d.ts"
 }

@@ -1,7 +1,6 @@
 {
-  // @ts-ignore
   "extends": "ts-config-single-spa",
-  "files": ["src/PeraLink-root-config.ts"],
+  "files": ["src/peralink-root-config.ts"],
   "compilerOptions": {
     "declarationDir": "dist"
   },

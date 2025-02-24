@@ -1,25 +1,20 @@
-import { registerApplication, start, LifeCycles } from "single-spa";
+import { registerApplication, start } from "single-spa";
+import {
+  constructApplications,
+  constructRoutes,
+  constructLayoutEngine,
+} from "single-spa-layout";
+import microfrontendLayout from "./microfrontend-layout.html";
 
-registerApplication({
-  name: "@single-spa/welcome",
-  app: () =>
-    import(
-      /* webpackIgnore: true */ // @ts-ignore-next
-      "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
-    ),
-  activeWhen: ["/"],
+const routes = constructRoutes(microfrontendLayout);
+const applications = constructApplications({
+  routes,
+  loadApp({ name }) {
+    return import(/* webpackIgnore: true */ name);
+  },
 });
+const layoutEngine = constructLayoutEngine({ routes, applications });
 
-// registerApplication({
-//   name: "@PeraLink/navbar",
-//   app: () =>
-//     import(
-//       /* webpackIgnore: true */ // @ts-ignore-next
-//       "@PeraLink/navbar"
-//     ),
-//   activeWhen: ["/"],
-// });
-
-start({
-  urlRerouteOnly: true,
-});
+applications.forEach(registerApplication);
+layoutEngine.activate();
+start();

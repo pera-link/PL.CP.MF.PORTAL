@@ -28,8 +28,11 @@
   <script type="injector-importmap">
     {
       "imports": {
-        "@PeraLink/root-config": "//localhost:9000/PeraLink-root-config.js",
-        "@single-spa/welcome": "https://cdn.jsdelivr.net/npm/single-spa-welcome/dist/single-spa-welcome.min.js"
+        "react": "https://cdn.jsdelivr.net/npm/react@18.0.0/+esm",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.0.0/+esm",
+        "react-dom/client": "https://cdn.jsdelivr.net/npm/react-dom@18.0.0/client/+esm",
+        "@peralink/root-config": "//localhost:9000/peralink-root-config.js",
+        "@peralink/dashboard": "//localhost:9001/peralink-dashboard.js"
       }
     }
   </script>
@@ -45,7 +48,7 @@
   <main></main>
   <script>
     window.importMapInjector.initPromise.then(() => {
-      import('@PeraLink/root-config');
+      import('@peralink/root-config');
     });
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
