@@ -1,4 +1,4 @@
-# PL.MF.PORTAL
+# PL.CP.MF.PORTAL
 
 > Mounting Microfrontend for the PeraLink platform – orchestrating and managing microfrontend lifecycles.
 
@@ -6,7 +6,7 @@
 
 ## 📌 Overview
 
-**PL.MF.PORTAL** serves as the **root configuration and orchestration layer** of the PeraLink MicroFrontend (PL.MF) ecosystem. It is responsible for dynamically mounting, managing, and configuring microfrontends across the platform.
+**PL.CP.MF.PORTAL** serves as the **root configuration and orchestration layer** of the PeraLink MicroFrontend (PL.MF) ecosystem. It is responsible for dynamically mounting, managing, and configuring microfrontends across the platform.
 
 ---
 
