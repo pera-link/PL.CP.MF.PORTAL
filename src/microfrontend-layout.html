@@ -1,12 +1,12 @@
 <single-spa-router>
-  <!--
+    <!--
 
     This is the single-spa Layout Definition for your microfrontends.
     See https://single-spa.js.org/docs/layout-definition/ for more information.
 
   -->
 
-  <!-- Example layouts you might find helpful:
+    <!-- Example layouts you might find helpful:
 
   <nav>
     <application name="@org/navbar"></application>
@@ -17,11 +17,18 @@
 
   -->
 
-  <main>
-    <route default>
-      <application name="@peralink/dashboard"></application>
-    </route>
-    <route path="/login">
-      <application name="@peralink/login"></application>
-  </main>
+    <main>
+      <route path="/login">
+        <application name="@peralink/login"></application>
+      </route>
+      <route path="/register">
+        <application name="@peralink/login"></application>
+      </route>
+      <route path="/forget-password">
+        <application name="@peralink/login"></application>
+      </route>
+      <route default>
+        <application name="@peralink/dashboard"></application>
+      </route>
+    </main>
 </single-spa-router>
